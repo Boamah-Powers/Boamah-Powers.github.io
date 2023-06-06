@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Journey Through the Forest</title>
+    <style>
+        body {
+            background-image: url("images/morning_forest.jpg");
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            transition: background-image 1m linear;
+        }
+        #title {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 20%;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = new Audio('forest_journey.mp3');
+            audio.play();
+
+            setTimeout(function() {
+                document.body.style.backgroundImage = 'url("images/noon_forest.jpg")';
+            }, 60000); // switch to noon image after 1 minute
+            
+            setTimeout(function() {
+                document.body.style.backgroundImage = 'url("images/night_forest.jpg")';
+            }, 60000); // switch to night image after 2 minutes
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title">Journey Through the Forest</h1>
+</body>
+</html>

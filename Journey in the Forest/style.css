@@ -1,0 +1,152 @@
+body {
+    background-image: url("images/forest_title.jpg");
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: background-image 2m linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#title {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* *********************************************************
+  Mute button
+********************************************************* */
+
+.mute-button {
+    margin-top: 1em;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* *********************************************************
+  Button 1 
+********************************************************* */
+
+.button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  text-shadow: none;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.button:hover,:focus {
+  color: #ffffff;
+  background: #209978;
+  border: 1px solid #209978;
+  text-shadow: 0 0 5px #ffffff,
+              0 0 10px #ffffff,
+              0 0 20px #ffffff;
+  box-shadow: 0 0 5px #209978,
+              0 0 20px #209978,
+              0 0 50px #209978,
+              0 0 100px #209978;
+}
+
+
+/* *********************************************************
+  Button 2
+********************************************************* */
+
+.nav-button {
+  position: relative;
+  width: 165px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #17795E;
+  background-color: #209978;
+  overflow: hidden;
+}
+
+.nav-button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.nav-button .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-button .button__icon {
+  position: absolute;
+  transform: translateX(118px);
+  height: 100%;
+  width: 39px;
+  background-color: #17795E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.nav-button:hover {
+  background: #17795E;
+}
+
+.nav-button:hover .button__text {
+  color: transparent;
+}
+
+.nav-button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.nav-button:active .button__icon {
+  background-color: #146c54;
+}
+
+.nav-button:active {
+  border: 1px solid #146c54;
+}
+
+/* *********************************************************
+  Zooming effect
+********************************************************* */
+
+body {
+/*  position: absolute;*/
+/*  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: zoomAnimation 60s linear infinite;
+}
+
+@keyframes zoomAnimation {
+  0% {
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+  100% {
+    background-size: 200% 200%;
+    background-position: 50% 5%;
+  }
