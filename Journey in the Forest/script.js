@@ -1,20 +1,9 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     var audio = document.getElementById('forest-sound');
-//     audio.play();
-
-//     setTimeout(function() {
-//         document.body.style.backgroundImage = 'url("images/noon_forest.jpg")';
-//     }, 60000); // switch to noon image after 1 minute
-
-//     setTimeout(function() {
-//         document.body.style.backgroundImage = 'url("images/night_forest.jpg")';
-//     }, 120000); // switch to night image after 2 minutes
-// });
-
 var night_audio = new Audio('sounds/forestnight.mp3');
 var morning_audio = new Audio('sounds/morning.mp3');
 var noon_audio = new Audio('sounds/afternoon.mp3');
 var title_audio = new Audio('sounds/title-track.ogg')
+var ending_audio = new Audio('sounds/ending.mp3')
+
 title_audio.loop = true;
 
 
@@ -51,9 +40,21 @@ function changeToEvening () {
 
     night_audio.play();
 
-    // button2.setAttribute( "onClick", "changeToMorning()" );
+    button2.setAttribute( "onClick", "changeToEndOfJourney()" );
 
     document.body.style.backgroundImage = 'url("images/night_forest.jpg")';
+}
+
+function changeToEndOfJourney () {
+    night_audio.pause()
+    var button2 = document.querySelector('.button');
+    button2.innerHTML = "Journey Ended";
+
+    ending_audio.play();
+
+    // button2.setAttribute( "onClick", "changeToMorning()" );
+
+    document.body.style.backgroundImage = 'url("images/closed.jpeg")';
 }
 
 function toggleMute() {
