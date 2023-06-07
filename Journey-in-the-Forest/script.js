@@ -25,8 +25,9 @@ function changeToMorning () {
 
     // changes the src and type for soundtrack playing
     let soundtrack = document.getElementById('soundtrack');
-    soundtrack.setAttribute("src", "sounds/morning.mp3")
-    soundtrack.setAttribute("type", "audio/mpeg")
+    soundtrack.src =  "sounds/morning.mp3";
+    soundtrack.load();
+    soundtrack.play();
 
     // updates screen image
     document.body.style.backgroundImage = 'url("images/morning_forest.jpg")';
@@ -43,6 +44,12 @@ function changeToAfternoon () {
     // changes behaviour of screen button on mouseclick
     button2.setAttribute( "onClick", "changeToEvening()" );
 
+    // changes the src and type for soundtrack playing
+    let soundtrack = document.getElementById('soundtrack');
+    soundtrack.src =  "sounds/afternoon.mp3";
+    soundtrack.load();
+    soundtrack.play();
+
     // updates screen image
     document.body.style.backgroundImage = 'url("images/noon_forest.jpg")';
 }
@@ -56,6 +63,12 @@ function changeToEvening () {
     // changes behaviour of screen button on mouseclick
     button2.setAttribute( "onClick", "changeToEndOfJourney()" );
 
+    // changes the src and type for soundtrack playing
+    let soundtrack = document.getElementById('soundtrack');
+    soundtrack.src =  "sounds/forestnight-4.mp3";
+    soundtrack.load();
+    soundtrack.play();
+
     // updates screen image
     document.body.style.backgroundImage = 'url("images/night_forest.jpg")';
 }
@@ -64,7 +77,16 @@ function changeToEndOfJourney () {
 
     // updates text in screen buttton
     var button2 = document.querySelector('.button');
-    button2.innerHTML = "Journey Ended";
+    button2.innerHTML = "Press to Restart";
+
+    // changes behaviour of screen button on mouseclick
+    button2.setAttribute( "onClick", "location.href = location.href" );
+
+    // changes the src and type for soundtrack playing
+    let soundtrack = document.getElementById('soundtrack');
+    soundtrack.src =  "sounds/ending.mp3";
+    soundtrack.load();
+    soundtrack.play();
 
 
     // button2.setAttribute( "onClick", "changeToMorning()" );

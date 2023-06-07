@@ -27,14 +27,15 @@
 
 
 	<!-- Audio file  -->
-	<audio loop id="mute-button">
-		<source src="sounds/title-track.ogg" type="audio/ogg" id="soundtrack">
+	<audio loop id="soundtrack">
+		<source src="sounds/title-track.ogg" type="audio/ogg" >
 	</audio>
+
 	<div>
-	   <button onclick = "document.getElementById('mute-button').play()">▷</button>
-	   <button onclick = "document.getElementById('mute-button').pause()">II</button>
-	   <button onclick = "document.getElementById('mute-button').volume += 0.2">➕</button>
-	   <button onclick = "document.getElementById('mute-button').volume -= 0.2">➖</button>
+	   <button class = "button-name" onclick = "document.getElementById('soundtrack').play()">▷</button>
+	   <button class = "button-name" onclick = "document.getElementById('soundtrack').pause()">||</button>
+	   <button class = "button-name" onclick = "document.getElementById('soundtrack').volume += 0.2">➕</button>
+	   <button class = "button-name" onclick = "document.getElementById('soundtrack').volume -= 0.2">➖</button>
 	</div>
 
 
