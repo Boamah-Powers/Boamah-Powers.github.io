@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Journey Through the Forest</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<!-- Title -->
+	<h1 id="title">Journey Through the Forest</h1>
+
+	<!-- Button 1 -->
+	<button class="button" onclick="changeToAfternoon()" style="display: none;">
+	  Proceed to noon
+	</button>
+
+	<button class="nav-button" type="button" onclick="changeToMorning()">
+	  <span class="button__text">Start Journey</span>
+	  <span class="button__icon">
+	  	➤
+	  </span>
+	</button>
+
+
+	<audio loop id="mute-button">
+		<source src="sounds/title-track.ogg" type="audio/ogg" id="soundtrack">
+	</audio>
+	<div>
+	   <button onclick = "document.getElementById('mute-button').play()">▷</button>
+	   <button onclick = "document.getElementById('mute-button').pause()">II</button>
+	   <button onclick = "document.getElementById('mute-button').volume += 0.2">➕</button>
+	   <button onclick = "document.getElementById('mute-button').volume -= 0.2">➖</button>
+	</div>
+
+
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="lib/p5.min.js"></script>
+	<script type="text/javascript" src="lib/addons/p5.sound.js"></script>
+</body>
+</html>
