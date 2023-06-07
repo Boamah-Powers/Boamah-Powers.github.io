@@ -11,68 +11,64 @@
 // ending_audio.loop = true;
 
 
-
+// changes to Morning image and soundtrack
 function changeToMorning () {
-    // document.getElementById("unmute").style.display = "block";
-    // document.getElementById("mute").style.display = "none";
-    // document.querySelector('.mute-button').style.display = "none";
 
+    // removes text already on screen
     var button1 = document.querySelector('.nav-button');
     button1.style.display = "none";
     document.getElementById("title").style.display = "none";
 
+    // displays screen buttton
     var button2 = document.querySelector('.button');
     button2.style.display = "block";
 
+    // changes the src and type for soundtrack playing
     let soundtrack = document.getElementById('soundtrack');
-    console.log(soundtrack)
     soundtrack.setAttribute("src", "sounds/morning.mp3")
     soundtrack.setAttribute("type", "audio/mpeg")
-    console.log(soundtrack)
 
-
-
+    // updates screen image
     document.body.style.backgroundImage = 'url("images/morning_forest.jpg")';
 }
 
+
+// changes to Afternoon image and soundtrack
 function changeToAfternoon () {
 
+    // updates text in screen buttton
     var button2 = document.querySelector('.button');
     button2.innerHTML = "Proceed to Evening";
 
-
+    // changes behaviour of screen button on mouseclick
     button2.setAttribute( "onClick", "changeToEvening()" );
 
+    // updates screen image
     document.body.style.backgroundImage = 'url("images/noon_forest.jpg")';
 }
 
 function changeToEvening () {
+
+    // updates text in screen buttton
     var button2 = document.querySelector('.button');
     button2.innerHTML = "End Journey";
 
+    // changes behaviour of screen button on mouseclick
     button2.setAttribute( "onClick", "changeToEndOfJourney()" );
 
+    // updates screen image
     document.body.style.backgroundImage = 'url("images/night_forest.jpg")';
 }
 
 function changeToEndOfJourney () {
+
+    // updates text in screen buttton
     var button2 = document.querySelector('.button');
     button2.innerHTML = "Journey Ended";
 
 
     // button2.setAttribute( "onClick", "changeToMorning()" );
 
+    // updates screen image
     document.body.style.backgroundImage = 'url("images/closed.jpeg")';
 }
-
-// function toggleMute() {
-//   if (title_audio.paused) {
-//     title_audio.play() // Unmute the title_audio
-//     document.getElementById("unmute").style.display = "none";
-//     document.getElementById("mute").style.display = "block";
-//   } else {
-//     title_audio.pause(); // Mute the title_audio
-//     document.getElementById("unmute").style.display = "block";
-//     document.getElementById("mute").style.display = "none";
-//   }
-// }
