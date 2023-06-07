@@ -1,16 +1,3 @@
-// var night_audio = new Audio('sounds/forestnight-4.mp3');
-// var morning_audio = new Audio('sounds/morning.mp3');
-// var noon_audio = new Audio('sounds/afternoon.mp3');
-// var title_audio = new Audio('sounds/title-track.ogg')
-// var ending_audio = new Audio('sounds/ending.mp3')
-
-// title_audio.loop = true;
-// night_audio.loop = true;
-// morning_audio.loop = true;
-// noon_audio.loop = true;
-// ending_audio.loop = true;
-
-
 // changes to Morning image and soundtrack
 function changeToMorning () {
 
