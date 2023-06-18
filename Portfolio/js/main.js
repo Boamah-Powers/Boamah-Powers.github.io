@@ -101,4 +101,30 @@
 		});
 	}
 
+	// Function to play the click sound
+  function playClickSound() {
+    var audio = new Audio('sfx/effect-2.mp3');
+    audio.play();
+  }
+
+  function playClickSound2() {
+    var audio = new Audio('sfx/effect-1.mp3');
+    audio.play();
+  }
+
+  function playClickSound3() {
+    var audio = new Audio('sfx/coin.mp3');
+    audio.play();
+  }
+
+  // Add event listeners to the links 
+  $(document).ready(function() {
+    $('#home-link').click(playClickSound);
+    $('#about-link').click(playClickSound);
+    $('#work-link').click(playClickSound);
+    $('#contact-link').click(playClickSound);
+    $('#back-to-top-link').click(playClickSound2);
+    $('.port-link').click(playClickSound3);
+  });
+
 })(jQuery);
