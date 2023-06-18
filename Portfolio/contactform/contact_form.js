@@ -1,6 +1,6 @@
 function sendEmail() {
 	Email.send({
-		SecureToken: "93df7bbb-ab10-49ef-b04b-2020fc12fb21",
+		SecureToken: "b09083f8-b406-494e-8f65-23d9a40ac779",
 	    To : 'kwaabp24@gmail.com',
 	    From : document.getElementById("email").value,
 	    Subject : "New Contact Form Enquiry",
